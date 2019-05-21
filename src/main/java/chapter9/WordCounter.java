@@ -15,6 +15,8 @@ import java.util.Scanner;
  *
  * 完整版本双城记、英王钦定本圣经、繁体版本三国志演义来自
  * <a href="https://www.gutenberg.org">Project Gutenberg</a>
+ *
+ * 数据结构视觉效果演示：https://visualgo.net/en/list
  * </pre>
  */
 public class WordCounter {
