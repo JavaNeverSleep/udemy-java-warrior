@@ -1,0 +1,25 @@
+{
+  "cmd": [
+    "${kotlin.directory.replace}\\kotlinc1.3.31\\bin\\kotlinc.bat",
+    "$file",
+    "-include-runtime",
+    "-d",
+    "$file_path\\\\$file_base_name.jar"
+  ],
+  "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+  "selector": "source.Kotlin",
+  "variants": [
+    {
+      "cmd": [
+        "java",
+        "-jar",
+        "$file_path\\\\$file_base_name.jar"
+      ],
+      "name": "Run"
+    }
+  ],
+  "windows": {
+    "encoding": "utf-8"
+  },
+  "working_dir": "$file_path"
+}

@@ -1,0 +1,6 @@
+{
+    "cmd": ["javac", "-encoding", "UTF-8", "$file_name", "&&","java", "$file_base_name"],
+ 	"file_regex": "^[ ]*File \"(...*?)\",line([0-9]*)",
+ 	"selector": "source.java",
+ 	"shell": true
+}
