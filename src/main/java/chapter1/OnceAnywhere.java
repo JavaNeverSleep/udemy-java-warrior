@@ -6,6 +6,7 @@ import java.io.IOException;
 /**
  * <pre>
  * "Write Once, Run Anywhere" - what does it mean in real life?
+ * "Write Once, Wrong Anywhere?"
  * “一次编写，到处运行”，还是“一次编写，到处调试”
  * https://en.wikipedia.org/wiki/Write_once,_run_anywhere
  * </pre>

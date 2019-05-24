@@ -1,4 +1,4 @@
-package chapter1;
+package chapter2;
 
 import java.util.Calendar;
 
