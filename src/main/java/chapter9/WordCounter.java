@@ -81,10 +81,12 @@ public class WordCounter {
         String filePath = "data/chapter9/" + args[0];
         String strategy = args.length > 1 ? args[1] : "Array";
         WordCounter counter = new WordCounter();
-        switch (strategy) {
-            case "Array" -> counter.countWordsUsingArray(filePath);
-            case "ArrayList" -> counter.countWordsUsingArrayList(filePath);
-            case "LinkedList" -> counter.countWordsUsingLinkedList(filePath);
+        if ("Array".equalsIgnoreCase(strategy)) {
+            counter.countWordsUsingArray(filePath);
+        } else if ("ArrayList".equalsIgnoreCase(strategy)) {
+            counter.countWordsUsingArrayList(filePath);
+        } else if ("LinkedList".equalsIgnoreCase(strategy)) {
+            counter.countWordsUsingLinkedList(filePath);
         }
     }
 

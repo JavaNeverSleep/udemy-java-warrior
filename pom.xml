@@ -73,10 +73,8 @@
                         </goals>
                     </execution>
                 </executions>
-                <!-- 研究学习尽可使用最新版本，并开启实验功能 -->
                 <configuration>
                     <release>12</release>
-                    <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
