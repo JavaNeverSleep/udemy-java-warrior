@@ -11,6 +11,7 @@ public class BracketValidator {
 
     public static void main(String[] args) {
         assert isValid("[1, 2]");
+        assert isValid("<[1, 2]>");
         assert isValid("[1, [2, 3], 4]");
         assert isValid("[{}, {{}}, (())]");
         assert !isValid("[1, 2] + }");
@@ -28,16 +29,18 @@ public class BracketValidator {
         }
     }
 
-    private static Map<Character, Character> PAIRS = Map.of(']', '[', '}', '{', ')', '(');
+    private static Map<Character, Character> MAPPINGS = Map.of(
+        ']', '[', '}', '{', ')', '(' , '>', '<'
+    );
 
     private static boolean isValid(String expression) {
-        Stack<Character> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < expression.length(); i++) {
             char c = expression.charAt(i);
-            if (c == '[' || c == '{' || c == '(') {
-                stack.push(c);
-            } else if (PAIRS.containsKey(c)) {
-                if (stack.isEmpty() || stack.peek() != PAIRS.get(c).charValue()) {
+            if (c == '[' || c == '{' || c == '(' || c == '<') {
+                stack.push(i);
+            } else if (MAPPINGS.containsKey(c)) {
+                if (stack.isEmpty() || expression.charAt(stack.peek()) != MAPPINGS.get(c)) {
                     return false;
                 } else {
                     stack.pop();
