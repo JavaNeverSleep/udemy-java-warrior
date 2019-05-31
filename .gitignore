@@ -2,3 +2,5 @@
 /target
 /*.iml
 /data/chapter1/sample.db
+/*.in
+/*.out
