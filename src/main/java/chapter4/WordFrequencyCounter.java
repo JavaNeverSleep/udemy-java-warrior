@@ -1,4 +1,4 @@
-package chapter9;
+package chapter4;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -79,7 +79,7 @@ public class WordFrequencyCounter {
         if (args.length < 1)
             throw new IllegalArgumentException("请输入有效的文件路径继续");
 
-        String filePath = "data/chapter9/" + args[0];
+        String filePath = "data/chapter4/" + args[0];
         WordFrequencyCounter counter = new WordFrequencyCounter();
         counter.execUsingHashSet(filePath);
         counter.execUsingHashMap(filePath);

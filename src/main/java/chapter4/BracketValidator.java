@@ -1,4 +1,4 @@
-package chapter9;
+package chapter4;
 
 import java.util.Map;
 import java.util.Scanner;
