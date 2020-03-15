@@ -4,3 +4,7 @@
 /data/chapter1/sample.db
 /*.in
 /*.out
+/.settings
+/.classpath
+/.project
+/.vscode
